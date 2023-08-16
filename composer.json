@@ -2,6 +2,7 @@
     "name": "koko-ng/admin-notice",
     "type": "project",
     "description": "Simply set notices from various save_post hooks",
+    "license": ["GPL-3.0-or-later"],
     "autoload": {
         "files": [ "src/class-adminnoticeexception.php", "src/admin-notice.php" ]
     },

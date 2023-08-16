@@ -22,7 +22,7 @@ require 'vendor/autoload.php';
 add_action('acf/save_post', \Admin_Notice\with_error_notice( 'my_acf_save_post') );
 function my_acf_save_post( $post_id ) {
 
-  // You can use `\Admin_Notice\Exception` to set an notice level.
+  // You can use `\Admin_Notice\Exception` to set a notice level.
   throw new \Admin_Notice\Exception("Error message", 0, \Admin_Notice\NoticeLevels::Warning);
 }
 ```
