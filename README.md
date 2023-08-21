@@ -6,7 +6,7 @@ You can either set the notice using `set_notice_status` or wrap your hook with `
 ## Features
 
  - [x] Gutenberg notices
- - [ ] Classic editor notices
+ - [x] Classic editor notices
 
 ## Installation
 

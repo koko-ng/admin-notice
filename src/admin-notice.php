@@ -225,3 +225,17 @@ function get_notices( \WP_REST_Request $request ) {
 		return new \WP_REST_Response( array() );
 	}
 }
+
+function legacy_notice() {
+	$transient = sprintf( 'admin-notice-%d-%d', get_the_ID(), get_current_user_id() );
+	$error     = get_transient( $transient );
+	delete_transient( $transient );
+
+	if ( $error ) {
+		$data = json_decode( $error );
+      echo '<div class="notice notice-'.$data->level.' is-dismissible">
+      <p>'.esc_html($data->message).'</p>
+      </div>';
+    }
+}
+add_action( 'admin_notices', __NAMESPACE__ . '\legacy_notice' );
